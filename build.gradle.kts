@@ -30,6 +30,8 @@ dependencies {
         exclude(group = "org.junit.vintage", module = "junit-vintage-engine")
     }
     testImplementation(kotlin("test"))
+    // https://mvnrepository.com/artifact/com.ninja-squad/springmockk
+    implementation("com.ninja-squad:springmockk:4.0.2")
 
 }
 
