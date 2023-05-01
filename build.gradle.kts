@@ -1,6 +1,7 @@
 plugins {
     kotlin("jvm") version "1.8.21"
     id("io.spring.dependency-management") version "1.1.0"
+    id("org.springframework.boot") version "3.0.6"
     kotlin("plugin.spring") version "1.6.21"
     application
 }
@@ -21,6 +22,7 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-data-jpa:3.0.6")
     implementation("org.springframework.boot:spring-boot-starter-security:3.0.6")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.15.0")
+    implementation("org.liquibase:liquibase-core:4.21.1")
     testImplementation("org.springframework.boot:spring-boot-starter-test:3.0.6") {
         exclude(group = "org.junit.vintage", module = "junit-vintage-engine")
     }
@@ -34,8 +36,4 @@ tasks.test {
 
 kotlin {
     jvmToolchain(17)
-}
-
-application {
-    mainClass.set("MainKt")
 }

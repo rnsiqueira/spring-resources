@@ -12,6 +12,8 @@ spring:
     password: anypass
   jpa:
     spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
+  liquibase:
+    change-log: classpath:database/schema.sql
   security:
     user:
       name: app
