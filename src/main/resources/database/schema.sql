@@ -1,4 +1,8 @@
 -- liquibase formatted sql
 
 -- changeset liquibase:1
-CREATE TABLE test_table (test_id INT, test_column VARCHAR, PRIMARY KEY (test_id))
+CREATE TABLE USERS (id INT, name VARCHAR, password VARCHAR, PRIMARY KEY (id))
+
+-- changeset liquibase:2
+INSERT INTO USERS (id, name, password) VALUES (1, 'root', 'root');
+COMMIT;
