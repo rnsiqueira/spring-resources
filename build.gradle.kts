@@ -16,7 +16,7 @@ repositories {
 }
 
 dependencies {
-    testImplementation(kotlin("test"))
+
     implementation("org.springframework.boot:spring-boot-starter-actuator:3.0.6")
     implementation("org.springframework.boot:spring-boot-starter-web:3.0.6")
     implementation("org.springframework.boot:spring-boot-starter-data-jpa:3.0.6")
@@ -24,11 +24,13 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-security:3.0.6")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.15.0")
     implementation("org.liquibase:liquibase-core:4.21.1")
+    // https://mvnrepository.com/artifact/com.h2database/h2
+    implementation("com.h2database:h2:2.1.214")
     testImplementation("org.springframework.boot:spring-boot-starter-test:3.0.6") {
         exclude(group = "org.junit.vintage", module = "junit-vintage-engine")
     }
-    // https://mvnrepository.com/artifact/com.h2database/h2
-    implementation("com.h2database:h2:2.1.214")
+    testImplementation(kotlin("test"))
+
 }
 
 tasks.test {
