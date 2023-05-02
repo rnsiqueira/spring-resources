@@ -28,10 +28,14 @@ dependencies {
     implementation("com.h2database:h2:2.1.214")
     testImplementation("org.springframework.boot:spring-boot-starter-test:3.0.6") {
         exclude(group = "org.junit.vintage", module = "junit-vintage-engine")
+        exclude(module = "mockito-core")
     }
     testImplementation(kotlin("test"))
     // https://mvnrepository.com/artifact/com.ninja-squad/springmockk
-    implementation("com.ninja-squad:springmockk:4.0.2")
+    testImplementation("org.junit.jupiter:junit-jupiter-api")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
+    testImplementation("com.ninja-squad:springmockk:4.0.2")
+    testImplementation("org.springframework.security:spring-security-test:6.0.3")
 
 }
 

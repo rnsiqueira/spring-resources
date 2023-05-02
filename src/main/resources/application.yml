@@ -18,5 +18,6 @@ spring:
     user:
       name: app
       password: appTest
+      role: USER
   jmx:
     enable: true
