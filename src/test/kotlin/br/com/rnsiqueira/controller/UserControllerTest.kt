@@ -1,7 +1,6 @@
 package br.com.rnsiqueira.controller
 
 import br.com.rnsiqueira.ApplicationRun
-import br.com.rnsiqueira.service.UserService
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
@@ -18,7 +17,7 @@ import java.util.*
 
 @SpringBootTest(classes = arrayOf(ApplicationRun::class))
 @AutoConfigureMockMvc
-class UserControllerTest @Autowired constructor(val mockMvc: MockMvc, userService: UserService) {
+class UserControllerTest @Autowired constructor(val mockMvc: MockMvc) {
 
     @Test
     @WithMockUser(username = "app")

@@ -1,11 +1,12 @@
 package br.com.rnsiqueira.security
 
-import br.com.rnsiqueira.service.UserService
-import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity
-import org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration
+import org.springframework.context.annotation.Bean
+import org.springframework.context.annotation.Configuration
 
-@EnableWebSecurity(debug = true)
-class SecurityConfig(@Autowired userService: UserService) {
+@Configuration
+class SecurityConfig {
+
+    @Bean
+    fun start() = print("Configuration context of application!!!!!")
 
 }
