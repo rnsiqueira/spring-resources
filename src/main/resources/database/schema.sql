@@ -49,3 +49,7 @@ CREATE TABLE oauth2_authorized_client (
   created_at timestamp DEFAULT CURRENT_TIMESTAMP NOT NULL,
   PRIMARY KEY (client_registration_id, principal_name)
 );
+
+-- changeset liquibase:7
+INSERT INTO users (username, password, enabled) VALUES ('root', 'root', true);
+COMMIT;

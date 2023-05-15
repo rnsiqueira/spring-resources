@@ -1,27 +1,17 @@
 package br.com.rnsiqueira.security
 
+import br.com.rnsiqueira.service.UserService
+import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 
 @Configuration
-class SecurityConfig {
+class SecurityConfig(@Autowired private val userService: UserService) {
 
     @Bean
-    fun authorizedClientManager(
-        clientRegistrationRepository: ClientRegistrationRepository,
-        authorizedClientRepository: OAuth2AuthorizedClientRepository
-    ): OAuth2AuthorizedClientManager {
-        val authorizedClientProvider = OAuth2AuthorizedClientProviderBuilder.builder()
-            .authorizationCode()
-            .refreshToken()
-            .clientCredentials()
-            .password()
-            .build()
-        val authorizedClientManager = DefaultOAuth2AuthorizedClientManager(
-            clientRegistrationRepository, authorizedClientRepository
-        )
-        authorizedClientManager.setAuthorizedClientProvider(authorizedClientProvider)
-        return authorizedClientManager
+    fun userDetailsService() {
+        print("Start config security!!!!!")
+        userService.getUsers().forEach(System.out::println)
     }
 
 }
