@@ -24,6 +24,8 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-security:3.0.6")
     implementation("org.springframework.boot:spring-boot-starter-validation:3.0.6")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.15.0")
+    // https://mvnrepository.com/artifact/io.hawt/hawtio-springboot
+    implementation("io.hawt:hawtio-springboot:3.0-M7")
     implementation("org.liquibase:liquibase-core:4.21.1")
     // https://mvnrepository.com/artifact/com.h2database/h2
     implementation("com.h2database:h2:2.1.214")

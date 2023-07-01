@@ -14,10 +14,20 @@ spring:
     spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
   liquibase:
     change-log: classpath:database/schema.sql
-  security:
-    user:
-      name: app
-      password: appTest
-      role: USER
-  jmx:
-    enable: true
+#  security:
+#    oauth2:
+#      authorizationserver:
+#        endpoint:
+#          autorization-uri:
+#    user:
+#      name: app
+#      password: appTest
+#      role: USER
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "hawtio,jolokia"
+hawtio:
+  authenticationEnabled: false

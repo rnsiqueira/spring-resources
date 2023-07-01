@@ -1,4 +1,4 @@
-package br.com.rnsiqueira.service
+package br.com.rnsiqueira.security.service
 
 import br.com.rnsiqueira.entity.User
 import br.com.rnsiqueira.repository.UserRepository

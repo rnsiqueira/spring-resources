@@ -1,6 +1,9 @@
 package br.com.rnsiqueira.entity
 
-import jakarta.persistence.*
+import jakarta.persistence.Column
+import jakarta.persistence.Entity
+import jakarta.persistence.Id
+import jakarta.persistence.Table
 
 @Entity
 @Table(name = "users")
@@ -10,6 +13,6 @@ data class User(
     val name: String,
     @Column(name = "password")
     val password: String,
-    @Column(name = "enabled")
-    val enabled: Boolean? = null
+    @Column(name = "role")
+    val role: String? = null
 )
