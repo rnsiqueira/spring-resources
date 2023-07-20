@@ -1,6 +1,6 @@
 package br.com.rnsiqueira.controller
 
-import br.com.rnsiqueira.entity.User
+import br.com.rnsiqueira.security.entity.User
 import br.com.rnsiqueira.repository.UserRepository
 import br.com.rnsiqueira.security.service.UserService
 import org.springframework.web.bind.annotation.GetMapping

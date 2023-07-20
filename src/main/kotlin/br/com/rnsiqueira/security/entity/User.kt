@@ -1,4 +1,4 @@
-package br.com.rnsiqueira.entity
+package br.com.rnsiqueira.security.entity
 
 import jakarta.persistence.Column
 import jakarta.persistence.Entity

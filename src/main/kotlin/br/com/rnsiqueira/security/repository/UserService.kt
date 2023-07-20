@@ -1,6 +1,6 @@
 package br.com.rnsiqueira.repository
 
-import br.com.rnsiqueira.entity.User
+import br.com.rnsiqueira.security.entity.User
 
 interface UserService {
 

@@ -1,6 +1,6 @@
 package br.com.rnsiqueira.repository
 
-import br.com.rnsiqueira.entity.User
+import br.com.rnsiqueira.security.entity.User
 import org.springframework.data.jpa.repository.JpaRepository
 import org.springframework.stereotype.Repository
 

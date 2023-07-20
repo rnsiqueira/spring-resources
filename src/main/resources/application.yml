@@ -14,15 +14,23 @@ spring:
     spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
   liquibase:
     change-log: classpath:database/schema.sql
-#  security:
+  jmx:
+    enabled: true
+  batch:
+    job:
+      enabled: false
+    hadoop:
+      fsUri: hdfs://borneo:8020
+      resourceManagerHost: borneo
+  security:
 #    oauth2:
 #      authorizationserver:
 #        endpoint:
 #          autorization-uri:
-#    user:
-#      name: app
-#      password: appTest
-#      role: USER
+    user:
+      name: app
+      password: appTest
+      role: USER
 
 management:
   endpoints:
