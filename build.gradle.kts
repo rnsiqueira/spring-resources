@@ -31,14 +31,12 @@ dependencies {
     // https://mvnrepository.com/artifact/io.jsonwebtoken/jjwt-api
     implementation("io.jsonwebtoken:jjwt-api:0.11.5")
     // https://mvnrepository.com/artifact/org.apache.spark/spark-core
-    implementation("org.apache.spark:spark-core_2.13:3.4.1"){
+    implementation("org.apache.spark:spark-core_2.13:3.4.1") {
         exclude("org.apache.logging.log4j")
     }
-    implementation("org.apache.spark:spark-sql_2.13:3.4.1"){
+    implementation("org.apache.spark:spark-sql_2.13:3.4.1") {
         exclude("org.apache.logging.log4j")
     }
-
-
 
     testImplementation("org.springframework.boot:spring-boot-starter-test:3.0.6") {
         exclude(group = "org.junit.vintage", module = "junit-vintage-engine")
@@ -50,7 +48,6 @@ dependencies {
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
     testImplementation("com.ninja-squad:springmockk:4.0.2")
     testImplementation("org.springframework.security:spring-security-test:6.0.3")
-
 }
 
 tasks.test {

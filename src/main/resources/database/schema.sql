@@ -2,8 +2,10 @@
 
 -- changeset liquibase:1
 create table users(
-	username varchar_ignorecase(50) not null primary key,
+    id bigint  primary key not null,
+	username varchar_ignorecase(50) not null,
 	password varchar_ignorecase(50) not null,
+	email varchar,
 	role varchar_ignorecase(50) not null
 );
 
@@ -51,5 +53,5 @@ create table users(
 --);
 
 -- changeset liquibase:2
-INSERT INTO users (username, password, role) VALUES ('root', 'root', 'admin');
+INSERT INTO users (id, username, password, email, role) VALUES (2233, 'rafael.siqueira@rns.com.br', 'passTest','rafael.siqueira@rns.com.br',  'admin');
 COMMIT;

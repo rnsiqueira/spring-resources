@@ -1,5 +1,5 @@
 server:
-  port: 9990
+  port: 9005
   servlet:
     context-path: /app
 
@@ -27,10 +27,10 @@ spring:
 #      authorizationserver:
 #        endpoint:
 #          autorization-uri:
-    user:
-      name: app
-      password: appTest
-      role: USER
+#    user:
+#      name: app
+#      password: appTest
+#      role: USER
 
 management:
   endpoints:

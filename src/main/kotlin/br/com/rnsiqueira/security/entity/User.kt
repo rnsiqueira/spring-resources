@@ -1,18 +1,17 @@
 package br.com.rnsiqueira.security.entity
 
-import jakarta.persistence.Column
-import jakarta.persistence.Entity
-import jakarta.persistence.Id
-import jakarta.persistence.Table
+import jakarta.persistence.*
 
 @Entity
 @Table(name = "users")
 data class User(
     @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    val id: Long,
     @Column(name = "username", nullable = false)
-    val name: String,
+    val userName: String,
     @Column(name = "password")
     val password: String,
     @Column(name = "role")
-    val role: String? = null
+    val role: String? = null,
 )
